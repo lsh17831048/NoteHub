@@ -7,10 +7,10 @@
 
 
     <!-- Annotation -->
-    <mvc:annotation-driven></mvc:annotation-driven>
+    <mvc:annotation-driven/>
 
     <!-- Base package -->
-    <context:component-scan base-package="com.notehub.main"></context:component-scan>
+    <context:component-scan base-package="com.notehub.main"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>

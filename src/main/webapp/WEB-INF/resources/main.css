@@ -1,0 +1,10 @@
+.input-box {
+    position: absolute;
+    margin: 10px 0;
+    width: 1000px;
+    border : 10px solid darkblue;
+}
+
+.submitButton {
+    margin: 0 auto;
+}

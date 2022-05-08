@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+		<link rel = "stylesheet" href = "WEB-INF/resources/main.css"/>
+
 		<!-- ckEditor5 -->
 		<title>NoteHub</title>
 		<script src = "/WEB-INF/ckeditor5/build/ckeditor.js"></script>
@@ -53,6 +55,13 @@
 				</div>
 
 			<!-- Main -->
+				<form action = "" method = "POST">
+					<div class = "input-box">
+						<input id ="noteTitle" type = "text" name = "noteTitle" placeholder="제목">
+					</div><br>
+					<div class = "input-box">
+						<input id = "hashTag" type = "text" name = "hashTag" placeholder="해시태그">
+					</div>
 				<div class="wrapper style1">
 					<h1 style="text-align: center">노트 작성</h1><br>
 					<div class="container">
@@ -73,7 +82,8 @@
 
 					</div>
 				</div>
-
+					<input id = "submitButton" type="submit" value = "노트 저장">
+				</form>
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
