@@ -1,12 +1,14 @@
-
+<%@page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<title>NoteHub</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/main.css" />
+		<noscript><link rel="stylesheet" type="text/css" href="/css/static/css/noscript.css" /></noscript>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	</head>
@@ -19,7 +21,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="MainPage.html" id="logo">NoteHub</a></h1>
+								<h1><a href="MainPage.jsp" id="logo">NoteHub</a></h1>
 								<hr />
 								<p>Note Share Page</p>
 							</header>
@@ -31,7 +33,7 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="MainPage.html">Home</a></li>
+								<li><a href="MainPage.jsp">Home</a></li>
 								<li><a href="NoteEditPage.html">Create Note</a></li>
 								<li><a href="right-sidebar.html">Calendar</a></li>
 								<li><a href="no-sidebar.html">NoteHub</a></li>
@@ -57,7 +59,7 @@
 					<div class="reel">
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/WEB-INF/resources/images/pic01.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Pulvinar sagittis congue</a></h3>
 							</header>
@@ -65,7 +67,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/WEB-INF/resources/images/pic02.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Fermentum sagittis proin</a></h3>
 							</header>
@@ -73,7 +75,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/WEB-INF/resources/images/pic03.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
 							</header>
@@ -81,7 +83,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/WEB-INF/resources/images/pic04.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
 							</header>
@@ -89,7 +91,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/WEB-INF/resources/images/pic05.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Varius magnis sollicitudin</a></h3>
 							</header>
@@ -97,7 +99,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic01.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Pulvinar sagittis congue</a></h3>
 							</header>
@@ -105,7 +107,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic02.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Fermentum sagittis proin</a></h3>
 							</header>
@@ -113,7 +115,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic03.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
 							</header>
@@ -121,7 +123,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic04.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
 							</header>
@@ -129,7 +131,7 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic05.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Varius magnis sollicitudin</a></h3>
 							</header>
@@ -143,7 +145,7 @@
 				<div class="wrapper style2">
 
 					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+						<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic06.jpg" alt="" /></a>
 						<header>
 							<h2><a href="#">Sed massa imperdiet magnis</a></h2>
 							<p>
@@ -178,7 +180,7 @@
 						</header>
 						<div class="row">
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
+								<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic07.jpg" alt="" /></a>
 								<header>
 									<h3><a href="#">Gravida aliquam penatibus</a></h3>
 								</header>
@@ -188,7 +190,7 @@
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+								<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic08.jpg" alt="" /></a>
 								<header>
 									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
 								</header>
@@ -198,7 +200,7 @@
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
+								<a href="#" class="image featured"><img src="WEB-INF/resources/images/pic09.jpg" alt="" /></a>
 								<header>
 									<h3><a href="#">Magna laoreet et aliquam</a></h3>
 								</header>
@@ -298,22 +300,22 @@
 									</header>
 									<div class="row gtr-25">
 										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
+											<a href="#" class="image fit"><img src="WEB-INF/resources/images/pic10.jpg" alt="" /></a>
 										</div>
 										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
+											<a href="#" class="image fit"><img src="WEB-INF/resources/images/pic11.jpg" alt="" /></a>
 										</div>
 										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
+											<a href="#" class="image fit"><img src="WEB-INF/resources/images/pic12.jpg" alt="" /></a>
 										</div>
 										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
+											<a href="#" class="image fit"><img src="WEB-INF/resources/images/pic13.jpg" alt="" /></a>
 										</div>
 										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
+											<a href="#" class="image fit"><img src="WEB-INF/resources/images/pic14.jpg" alt="" /></a>
 										</div>
 										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
+											<a href="#" class="image fit"><img src="WEB-INF/resources/images/pic15.jpg" alt="" /></a>
 										</div>
 									</div>
 								</section>
@@ -355,14 +357,14 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="WEB-INF/resources/static/js/jquery.min.js"></script>
+			<script src="WEB-INF/resources/static/js/jquery.dropotron.min.js"></script>
+			<script src="WEB-INF/resources/static/js/jquery.scrolly.min.js"></script>
+			<script src="WEB-INF/resources/static/js/jquery.scrollex.min.js"></script>
+			<script src="WEB-INF/resources/static/js/browser.min.js"></script>
+			<script src="WEB-INF/resources/static/js/breakpoints.min.js"></script>
+			<script src="WEB-INF/resources/static/js/util.js"></script>
+			<script src="WEB-INF/resources/static/js/main.js"></script>
 
 	</body>
 </html>

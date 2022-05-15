@@ -11,9 +11,15 @@ public class HomeController {
     private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
     
     // 메인 페이지 이동
-    @RequestMapping(value = "/**/*.main")
+    @RequestMapping(value = "/")
     public String main() {
         logger.debug("메인 페이지 진입");
         return "MainPage";
+    }
+
+    @RequestMapping(value = "/NoteEditPage")
+    public String editPage() {
+        logger.debug("노트 작성 페이지 진입");
+        return "/WEB-INF/views/NoteEditPage.html";
     }
 }
