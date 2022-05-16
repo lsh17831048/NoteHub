@@ -20,6 +20,6 @@ public class HomeController {
     @RequestMapping(value = "/NoteEditPage")
     public String editPage() {
         logger.debug("노트 작성 페이지 진입");
-        return "/WEB-INF/views/NoteEditPage.html";
+        return "NoteEditPage";
     }
 }
