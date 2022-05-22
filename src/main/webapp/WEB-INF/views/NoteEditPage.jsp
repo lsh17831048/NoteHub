@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset = UTF-8"
+	pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <!--
 	Helios by HTML5 UP
@@ -9,22 +11,22 @@
 		<title>NoteHub - Create Note</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="/resources/css/main.css" />
+		<noscript><link rel="stylesheet" href="/resources/css/main.css" /></noscript>
 
-		<link rel = "stylesheet" href = "../resources/static/css/main.css"/>
 
 		<!-- ckEditor5 -->
 		<title>NoteHub</title>
-		<script src = "/WEB-INF/ckeditor5/build/ckeditor.js"></script>
+		<script src = "WEB-INF/ckeditor5/build/ckeditor.js"></script>
+		<script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
 
 		<!-- ckEditor5의 요소 크기 -->
 		<style>
 			.ck.ck-editor{
-				max-width: 1400px;
+				max-width: 1600px;
 			}
 			.ck-editor__editable {
-				min-height: 800px;
+				min-height: 1000px;
 			}
 		</style>
 	</head>
@@ -37,25 +39,25 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="MainPage.html" id="logo">Create Note</a></h1>
+								<h1><a href="Main" id="logo">Create Note</a></h1>
 							</header>
 						</div>
 
 					<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="/">Home</a></li>
-							<li><a href="NoteEditPage.html">Create Note</a></li>
-							<li><a href="right-sidebar.html">Calendar</a></li>
-							<li><a href="no-sidebar.html">NoteHub</a></li>
-							<li><a href="no-sidebar.html">Login</a></li>
+							<li><a href="Main">Home</a></li>
+							<li><a href="CreateNote">Create Note</a></li>
+							<li><a href="Calendar">Calendar</a></li>
+							<li><a href="NoteHub">NoteHub</a></li>
+							<li><a href="Login">Login</a></li>
 						</ul>
 					</nav>
 
 				</div>
 
 			<!-- Main -->
-				<form action = "" method = "POST">
+				<form action = "NoteHub" method = "POST">
 					<div class = "input-box">
 						<input id ="noteTitle" type = "text" name = "noteTitle" placeholder="제목">
 					</div><br>
@@ -63,14 +65,23 @@
 						<input id = "hashTag" type = "text" name = "hashTag" placeholder="해시태그">
 					</div>
 				<div class="wrapper style1">
-					<h1 style="text-align: center">노트 작성</h1><br>
-					<div class="container">
-
+					<div class="container" style="width: 1200px; height: 800px;">
+						<textarea id = "content" name = "content" rows = "6" cols = "80" placeholder="내용을 입력하세요"></textarea>
+						<!--
 						<div class = "editor"></div>
-							<script>ClassicEditor
+							<script>
+								let editor;
+
+								ClassicEditor
 								.create(document.querySelector('.editor'), {
 									licenseKey: '',
+									ckfinder: {
+										uploadUrl : 'http://localhost:1521/admin/test/imageUpload'
+									}
 								})
+										.then( newEditor => {
+											editor = newEditor;
+										})
 								.then( editor => {
 									window.editor = editor;
 								})
@@ -78,9 +89,15 @@
 									console.warn('Build id : i9h8b9hukly8-adw9d73t5e5');
 									console.error(error);
 								})
+								$content = CKEDITOR.instances.editor.getData();
 							</script>
+						-->
+
 
 					</div>
+					<script>
+						CKEDITOR.replace("content");
+					</script>
 				</div>
 					<input id = "submitButton" type="submit" value = "노트 저장">
 				</form>

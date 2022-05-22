@@ -20,7 +20,7 @@ pageEncoding="UTF-8" %>
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="MainPage.jsp" id="logo">NoteHub</a></h1>
+								<h1><a href="Main" id="logo">NoteHub</a></h1>
 								<hr />
 								<p>Note Share Page</p>
 							</header>
@@ -32,11 +32,11 @@ pageEncoding="UTF-8" %>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="MainPage.jsp">Home</a></li>
-								<li><a href="NoteEditPage.html">Create Note</a></li>
-								<li><a href="right-sidebar.html">Calendar</a></li>
-								<li><a href="no-sidebar.html">NoteHub</a></li>
-								<li><a href="no-sidebar.html">Login</a></li>
+								<li><a href="Main">Home</a></li>
+								<li><a href="CreateNote">Create Note</a></li>
+								<li><a href="Calendar">Calendar</a></li>
+								<li><a href="NoteHub">NoteHub</a></li>
+								<li><a href="Login">Login</a></li>
 							</ul>
 						</nav>
 
