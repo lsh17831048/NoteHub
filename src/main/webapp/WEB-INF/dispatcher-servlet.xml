@@ -14,7 +14,7 @@
     <mvc:annotation-driven/>
 
     <!-- Base package -->
-    <context:component-scan base-package="com.notehub.main"/>
+    <context:component-scan base-package="com.notehub.controller"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>

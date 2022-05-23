@@ -3,4 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+    <!-- Oracle 연동 -->
+
+    <bean class = "org.springframework.jdbc.datasource.DriverManagerDataSource" id = "dataSource">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin@localhost:1521:xe" />
+
+        <property name="username" value="notehub"/>
+        <property name="password" value="123456" />
+    </bean>
+
+
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id = "SqlSessionFactory">
+        <property name="dataSource" ref = "dataSource"/>
+        <property name="configLocation" value="classpath:/mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:/com.notehub.mapper/*Mapper.xml"/>
+    </bean>
+
 </beans>

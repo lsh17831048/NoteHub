@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; UTF-8"
+		 pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <!--
 	Helios by HTML5 UP
@@ -21,7 +23,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="Main" id="logo">Helios</a></h1>
+								<h1><a href="NoteHub" id="logo">NoteHub</a></h1>
 							</header>
 						</div>
 
@@ -46,19 +48,24 @@
 							<div class="col-8 col-12-mobile" id="content">
 								<article id="main">
 									<header>
-										<h2><a href="#">Right Sidebar</a></h2>
-										<p>
-											Morbi convallis lectus malesuada sed fermentum dolore amet
-										</p>
+										<h2><a href="NoteHub">Note List</a></h2>
+
 									</header>
 									<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
 									<p>
-										Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-										posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-										lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-										consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-										interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-										natoque aenean scelerisque vel lacinia mollis quam sodales congue.
+										<table>
+											<thead>
+												<tr>
+													<th>번호</th>
+													<th>제목</th>
+													<th>내용</th>
+													<th>작성자</th>
+													<th>등록일</th>
+													<th>추천수</th>
+													<th>조회수</th>
+												</tr>
+											</thead>
+										</table>
 									</p>
 									<section>
 										<header>

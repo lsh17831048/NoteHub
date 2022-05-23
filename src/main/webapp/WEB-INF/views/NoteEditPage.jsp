@@ -66,8 +66,6 @@
 					</div>
 				<div class="wrapper style1">
 					<div class="container" style="width: 1200px; height: 800px;">
-						<textarea id = "content" name = "content" rows = "6" cols = "80" placeholder="내용을 입력하세요"></textarea>
-						<!--
 						<div class = "editor"></div>
 							<script>
 								let editor;
@@ -91,7 +89,7 @@
 								})
 								$content = CKEDITOR.instances.editor.getData();
 							</script>
-						-->
+
 
 
 					</div>

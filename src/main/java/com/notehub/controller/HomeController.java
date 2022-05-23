@@ -1,4 +1,4 @@
-package com.notehub.main;
+package com.notehub.controller;
 
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
