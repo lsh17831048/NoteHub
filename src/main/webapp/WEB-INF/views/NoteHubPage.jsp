@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; UTF-8"
 		 pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <!--
 	Helios by HTML5 UP
@@ -54,17 +55,42 @@
 									<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
 									<p>
 										<table>
+											<col style="width: 5%;"/>
+											<col style="width: auto;"/>
+											<col style="width: 15%;"/>
+											<col style="width: 10%;"/>
+											<col style="width: 10%;"/>
+											<col style="width: 10%;"/>
 											<thead>
 												<tr>
 													<th>번호</th>
 													<th>제목</th>
-													<th>내용</th>
 													<th>작성자</th>
 													<th>등록일</th>
 													<th>추천수</th>
 													<th>조회수</th>
 												</tr>
 											</thead>
+											<tbody>
+												<c:choose>	<%-- c:choose == if-else문 --%>
+													<c:when test = "${empty noteList}">
+														<tr><td colspan="5" align="center">데이터가 없습니다</td> </tr>
+													</c:when>
+													<c:when test="${!empty noteList}">
+														<c:forEach var = "list" items = "${noteList}">	<%-- c:forEach == for문 --%>
+															<tr>
+																<td><c:out value = "${list.noteList_num}"/></td>
+																<td><c:out value = "${list.note_title}"/></td>
+																<td><c:out value = "${list.note_content}"/></td>
+																<td><c:out value = "${list.mem_id}"/></td>
+																<td><c:out value = "${list.note_register_datetime}"/></td>
+																<td><c:out value = "${list.note_recommend}"/></td>
+																<td><c:out value = "${list.note_readCount}"/></td>
+															</tr>
+														</c:forEach>
+													</c:when>
+												</c:choose>
+											</tbody>
 										</table>
 									</p>
 									<section>

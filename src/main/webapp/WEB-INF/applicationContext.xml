@@ -4,8 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <!-- Oracle 연동 -->
-
+    <!-- dataSource 객체 -->
     <bean class = "org.springframework.jdbc.datasource.DriverManagerDataSource" id = "dataSource">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
         <property name="url" value="jdbc:oracle:thin@localhost:1521:xe" />
@@ -14,11 +13,16 @@
         <property name="password" value="123456" />
     </bean>
 
-
-    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id = "SqlSessionFactory">
+    <!-- sqlSessionFactory 객체 -->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id = "sqlSessionFactory">
         <property name="dataSource" ref = "dataSource"/>
         <property name="configLocation" value="classpath:/mybatis-config.xml"/>
         <property name="mapperLocations" value="classpath:/com.notehub.mapper/*Mapper.xml"/>
+    </bean>
+
+    <!-- sqlSessionTemplate 설정 -->
+    <bean id = "sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
 </beans>

@@ -29,12 +29,6 @@ public class HomeController {
         return "CalendarPage";
     }
 
-    @RequestMapping(value = "/NoteHub")
-    public String noteHubPage() {
-        logger.debug("노트 허브 페이지 진입");
-        return "NoteHubPage";
-    }
-
     @RequestMapping(value = "/Login")
     public String loginPage() {
         logger.debug("로그인 페이지 진입");
