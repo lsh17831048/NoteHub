@@ -34,7 +34,7 @@
 								<li><a href="Main">Home</a></li>
 								<li><a href="CreateNote">Create Note</a></li>
 								<li><a href="Calendar">Calendar</a></li>
-								<li><a href="NoteHub">NoteHub</a></li>
+								<li><a href="NoteHub/list">NoteHub</a></li>
 								<li><a href="Login">Login</a></li>
 							</ul>
 						</nav>
@@ -72,62 +72,28 @@
 												</tr>
 											</thead>
 											<tbody>
-												<c:choose>	<%-- c:choose == if-else문 --%>
-													<c:when test = "${empty noteList}">
-														<tr><td colspan="5" align="center">데이터가 없습니다</td> </tr>
-													</c:when>
-													<c:when test="${!empty noteList}">
-														<c:forEach var = "list" items = "${noteList}">	<%-- c:forEach == for문 --%>
-															<tr>
-																<td><c:out value = "${list.noteList_num}"/></td>
-																<td><c:out value = "${list.note_title}"/></td>
-																<td><c:out value = "${list.note_content}"/></td>
-																<td><c:out value = "${list.mem_id}"/></td>
-																<td><c:out value = "${list.note_register_datetime}"/></td>
-																<td><c:out value = "${list.note_recommend}"/></td>
-																<td><c:out value = "${list.note_readCount}"/></td>
-															</tr>
-														</c:forEach>
-													</c:when>
-												</c:choose>
+
+												<c:forEach items="${list}" var="list">
+													<tr>
+														<td>${list.notelist_num}</td>
+														<td>${list.note_title}</td>
+														<td>${list.note_content}</td>
+														<td>${list.mem_id}</td>
+														<td>${list.note_register_datetime}</td>
+														<td>${list.note_recommend}</td>
+														<td>${list.note_readCount}</td>
+													</tr>
+												</c:forEach>
 											</tbody>
 										</table>
 									</p>
-									<section>
-										<header>
-											<h3>Ultrices tempor sagittis nisl</h3>
-										</header>
-										<p>
-											Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet
-											at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-											feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-											fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus
-											egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
-										</p>
-										<p>
-											Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient
-											orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur
-											ut penatibus fermentum nibh erat malesuada varius.
-										</p>
-									</section>
-									<section>
-										<header>
-											<h3>Augue euismod feugiat tempus</h3>
-										</header>
-										<p>
-											Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-											feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-											ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante
-											egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
-										</p>
-									</section>
 								</article>
 							</div>
 							<div class="col-4 col-12-mobile" id="sidebar">
 								<hr class="first" />
 								<section>
 									<header>
-										<h3><a href="#">Accumsan sed penatibus</a></h3>
+										<h3><a href="#">즐겨찾기</a></h3>
 									</header>
 									<p>
 										Dolor sed fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
@@ -135,7 +101,7 @@
 										magna tempus feugiat veroeros.
 									</p>
 									<footer>
-										<a href="#" class="button">Learn More</a>
+										<a href="#" class="button">더보기</a>
 									</footer>
 								</section>
 								<hr />

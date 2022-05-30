@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface NoteHubDAO {
 
-    public List list() throws Exception;
+  //  public List list() throws Exception;
 }

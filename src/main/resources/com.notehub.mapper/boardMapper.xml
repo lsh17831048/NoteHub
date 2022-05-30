@@ -4,7 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.notehub.mapper.boardMapper">
 
-        <select id="getBoardList" resultType="com.notehub.vo.NoteListVO">
-
+        <select id="list" resultType="com.notehub.vo.NoteListVO">
+            select notelist_num, note_title, mem_id, note_tag, note_register_datetime, note_recommend, note_readCount
+            from notelist
         </select>
 </mapper>
