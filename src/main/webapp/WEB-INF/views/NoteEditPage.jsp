@@ -26,10 +26,21 @@
 				max-width: 1600px;
 			}
 			.ck-editor__editable {
-				min-height: 1000px;
+				min-height: 800px;
 			}
 		</style>
 	</head>
+	<script>
+
+		var formObj = $("form[role='form]");
+
+		$("#btnSave").click(function (){
+
+			formObj.attr("action", "/saveBoard");
+			formObj.attr("method", "post");
+			formObj.submit();
+		})
+	</script>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
 
@@ -57,15 +68,15 @@
 				</div>
 
 			<!-- Main -->
-				<form action = "NoteHub" method = "POST">
+				<form name="form" role="form" action = "${pageContext.request.contextPath}/NoteHub" method = "POST">
 					<div class = "input-box">
-						<input id ="nh_title" type = "text" name = "noteTitle" placeholder="제목">
-					</div><br>
+						<input id ="nh_title" type = "text" name = "nh_title" placeholder="제목">
+					</div><br/>
 					<div class="input_box">
-						<input  id = "nh_name" type="text" name="name" placeholder="작성자" >
-					</div>
+						<input  id = "nh_register_id" type="text" name="nh_register_id" placeholder="작성자" >
+					</div><br/>
 					<div class = "input-box">
-						<input id = "nh_hashtag" type = "text" name = "hashTag" placeholder="해시태그">
+						<input id = "nh_hashtag" type = "text" name = "nh_hashtag" placeholder="해시태그">
 					</div>
 				<div class="wrapper style1">
 					<div class="container" style="width: 1200px; height: 800px;">
@@ -93,15 +104,15 @@
 								$content = CKEDITOR.instances.editor.getData();
 							</script>
 
-
-
 					</div>
 					<script>
 						CKEDITOR.replace("content");
 					</script>
 				</div>
-					<input id = "submitButton" type="button" onclick="fn_boardRegi();" value = "노트 저장"/>
 				</form>
+				<div>
+					<button type="button" id = "btnSave">노트 저장</button>
+				</div>
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">

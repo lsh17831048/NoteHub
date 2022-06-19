@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class NoteHubServiceImpl implements NoteHubService {
@@ -21,8 +20,7 @@ public class NoteHubServiceImpl implements NoteHubService {
 
 
     @Override
-    public Map<String, Object> insertBoard(NoteHubDTO noteHubDTO) throws Exception {
+    public void insertBoard(NoteHubDTO noteHubDTO) throws Exception {
         noteHubDAO.insertBoard(noteHubDTO);
-        return null;
     }
 }

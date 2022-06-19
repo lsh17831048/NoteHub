@@ -10,7 +10,7 @@
 -->
 <html>
 	<head>
-		<title>Right Sidebar - Helios by HTML5 UP</title>
+		<title>NoteHub - NoteHub</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/resources/css/main.css" />
@@ -36,7 +36,7 @@
 								<li><a href="Main">Home</a></li>
 								<li><a href="CreateNote">Create Note</a></li>
 								<li><a href="Calendar">Calendar</a></li>
-								<li><a href="NoteHubPage">NoteHub</a></li>
+								<li><a href="NoteHub">NoteHub</a></li>
 								<li><a href="Login">Login</a></li>
 							</ul>
 						</nav>
@@ -104,9 +104,7 @@
 										<h3><a href="#">즐겨찾기</a></h3>
 									</header>
 									<p>
-										Dolor sed fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-										porttitor phasellus tempus cubilia ultrices tempor sagittis  tellus ante diam nec penatibus dolor cras
-										magna tempus feugiat veroeros.
+										즐겨찾기에 추가한 게시물이 출력됩니다.
 									</p>
 									<footer>
 										<a href="#" class="button">더보기</a>
@@ -115,17 +113,17 @@
 								<hr />
 								<section>
 									<header>
-										<h3><a href="#">Sed lorem etiam consequat</a></h3>
+										<h3><a href="#">추천 노트</a></h3>
 									</header>
 									<p>
-										Tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+										이번 달에 가장 많은 추천을 받은 노트입니다.
 									</p>
 									<div class="row gtr-50">
 										<div class="col-4">
 											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Nibh sed cubilia</h4>
+											<h4>Note 1</h4>
 											<p>
 												Amet nullam fringilla nibh nulla convallis tique ante proin.
 											</p>
@@ -134,7 +132,7 @@
 											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Proin sed adipiscing</h4>
+											<h4>Note 2</h4>
 											<p>
 												Amet nullam fringilla nibh nulla convallis tique ante proin.
 											</p>
@@ -143,7 +141,7 @@
 											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Lorem feugiat magna</h4>
+											<h4>Note 3</h4>
 											<p>
 												Amet nullam fringilla nibh nulla convallis tique ante proin.
 											</p>
@@ -152,7 +150,7 @@
 											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Sed tempus fringilla</h4>
+											<h4>Note 4</h4>
 											<p>
 												Amet nullam fringilla nibh nulla convallis tique ante proin.
 											</p>
@@ -161,14 +159,14 @@
 											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Malesuada fermentum</h4>
+											<h4>Note 5</h4>
 											<p>
 												Amet nullam fringilla nibh nulla convallis tique ante proin.
 											</p>
 										</div>
 									</div>
 									<footer>
-										<a href="#" class="button">Magna Adipiscing</a>
+										<a href="#" class="button">더보기</a>
 									</footer>
 								</section>
 							</div>

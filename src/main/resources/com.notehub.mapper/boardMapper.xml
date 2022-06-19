@@ -9,6 +9,7 @@
         select NH_NUM, NH_CATEGORY, NH_TITLE, NH_CONTENT, NH_HASHTAG, NH_VIEWCOUNT, NH_REGISTER_ID,
                NH_REGISTER_DATE, NH_UPDATE_DATE
         FROM NOTEHUB
+        order by NH_NUM asc
     </select>
 
     <!-- 노트 정보 가져오기 -->

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Helios by HTML5 UP</title>
+		<title>NoteHub - Calendar</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/resources/css/main.css" />
@@ -21,7 +21,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="Main" id="logo">Helios</a></h1>
+								<h1><a href="Main" id="logo">Calendar</a></h1>
 							</header>
 						</div>
 
@@ -31,7 +31,7 @@
 								<li><a href="Main">Home</a></li>
 								<li><a href="CreateNote">Create Note</a></li>
 								<li><a href="Calendar">Calendar</a></li>
-								<li><a href="NoteHubPage">NoteHub</a></li>
+								<li><a href="NoteHub">NoteHub</a></li>
 								<li><a href="Login">Login</a></li>
 							</ul>
 						</nav>

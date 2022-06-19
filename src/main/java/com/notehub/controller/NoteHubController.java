@@ -28,15 +28,11 @@ public class NoteHubController {
         return "NoteHubPage";
     }
 
-    @RequestMapping("/CreateNote")
-    public String NoteEditView() {
-        return "NoteEditPage";
-    }
 
     // RedirectAttributes는 글쓰기 이후 돌아가야 할 페이지에 데이터를 전달
     @RequestMapping(value = "/saveBoard", method = RequestMethod.POST)
     public String saveBoard(@ModelAttribute("NoteHubDTO") NoteHubDTO noteHubDTO, RedirectAttributes redirectAttributes) throws Exception {
         noteHubService.insertBoard(noteHubDTO);
-        return "redirect:/NoteHub";
+        return "redirect:/NoteHubPage";
     }
 }
