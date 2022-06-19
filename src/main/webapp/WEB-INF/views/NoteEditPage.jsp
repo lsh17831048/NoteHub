@@ -59,10 +59,13 @@
 			<!-- Main -->
 				<form action = "NoteHub" method = "POST">
 					<div class = "input-box">
-						<input id ="noteTitle" type = "text" name = "noteTitle" placeholder="제목">
+						<input id ="nh_title" type = "text" name = "noteTitle" placeholder="제목">
 					</div><br>
+					<div class="input_box">
+						<input  id = "nh_name" type="text" name="name" placeholder="작성자" >
+					</div>
 					<div class = "input-box">
-						<input id = "hashTag" type = "text" name = "hashTag" placeholder="해시태그">
+						<input id = "nh_hashtag" type = "text" name = "hashTag" placeholder="해시태그">
 					</div>
 				<div class="wrapper style1">
 					<div class="container" style="width: 1200px; height: 800px;">
@@ -97,7 +100,7 @@
 						CKEDITOR.replace("content");
 					</script>
 				</div>
-					<input id = "submitButton" type="submit" value = "노트 저장">
+					<input id = "submitButton" type="button" onclick="fn_boardRegi();" value = "노트 저장"/>
 				</form>
 			<!-- Footer -->
 				<div id="footer">

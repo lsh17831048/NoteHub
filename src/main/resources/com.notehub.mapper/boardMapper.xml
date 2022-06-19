@@ -2,10 +2,50 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.notehub.mapper.boardMapper">
+<mapper namespace="notehub">
 
-        <select id="list" resultType="com.notehub.vo.NoteListVO">
-            select notelist_num, note_title, mem_id, note_tag, note_register_datetime, note_recommend, note_readCount
-            from notelist
-        </select>
+    <!-- 노트 목록 -->
+    <select id="getBoardList" resultType="com.notehub.dto.NoteHubDTO">
+        select NH_NUM, NH_CATEGORY, NH_TITLE, NH_CONTENT, NH_HASHTAG, NH_VIEWCOUNT, NH_REGISTER_ID,
+               NH_REGISTER_DATE, NH_UPDATE_DATE
+        FROM NOTEHUB
+    </select>
+
+    <!-- 노트 정보 가져오기 -->
+    <select id="getBoardContent" resultType="com.notehub.dto.NoteHubDTO" parameterType="com.notehub.dto.NoteHubDTO">
+        select NH_NUM, NH_CATEGORY, NH_TITLE, NH_CONTENT, NH_HASHTAG, NH_VIEWCOUNT, NH_REGISTER_DATE, NH_UPDATE_DATE
+        from NOTEHUB
+        WHERE NH_NUM = #{NH_NUM, jdbcType = VARCHAR}
+    </select>
+
+    <!-- 노트 저장 -->
+    <insert id="insertBoard" parameterType="com.notehub.dto.NoteHubDTO">
+        insert into notehub (nh_category, nh_title, nh_content, nh_hashtag, nh_viewCount, nh_register_date, nh_update_date)
+        values (#{nh_category, jdbcType = VARCHAR}, #{nh_title, jdbcType = VARCHAR}, #{nh_content, jdbcType = VARCHAR},
+                #{nh_hashtag, jdbcType = VARCHAR}, #{nh_viewCount, jdbcType = NUMERIC}, sysdate, sysdate)
+    </insert>
+
+    <!-- 노트 갱신 -->
+    <update id="updateBoard" parameterType="com.notehub.dto.NoteHubDTO">
+        update notehub set
+            nh_category = #{nh_category, jdbcType = VARCHAR},
+            nh_title = #{nh_title, jdbcType = VARCHAR},
+            nh_content = #{nh_content, jdbcType = VARCHAR},
+            nh_hashtag = #{nh_hashtag, jdbcType = VARCHAR},
+            nh_update_date = sysdate
+        where nh_num = #{nh_num, jdbcType = NUMERIC}
+    </update>
+
+    <!-- 노트 삭제 -->
+    <delete id="deleteBoard" parameterType="int">
+        delete from notehub when nh_num = #{nh_num, jdbcType = NUMERIC}
+    </delete>
+
+    <!-- 조회수 갱신 -->
+    <update id="updateViewCnt" parameterType="com.notehub.dto.NoteHubDTO">
+        update notehub set
+            nh_viewCount = nh_viewCount + 1
+        where
+            nh_num = #{nh_num, jdbcType = VARCHAR}
+    </update>
 </mapper>

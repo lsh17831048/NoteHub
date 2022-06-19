@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE HTML>
 <!--
 	Helios by HTML5 UP
@@ -14,6 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/resources/css/main.css" />
 		<noscript><link rel="stylesheet" href="/resources/css/noscript.css" /></noscript>
+
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -34,7 +36,7 @@
 								<li><a href="Main">Home</a></li>
 								<li><a href="CreateNote">Create Note</a></li>
 								<li><a href="Calendar">Calendar</a></li>
-								<li><a href="NoteHub/list">NoteHub</a></li>
+								<li><a href="NoteHubPage">NoteHub</a></li>
 								<li><a href="Login">Login</a></li>
 							</ul>
 						</nav>
@@ -49,44 +51,50 @@
 							<div class="col-8 col-12-mobile" id="content">
 								<article id="main">
 									<header>
-										<h2><a href="NoteHub">Note List</a></h2>
+										<h2><a href="NoteHubPage">Note List</a></h2>
 
 									</header>
 									<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
 									<p>
-										<table>
-											<col style="width: 5%;"/>
-											<col style="width: auto;"/>
-											<col style="width: 15%;"/>
-											<col style="width: 10%;"/>
-											<col style="width: 10%;"/>
-											<col style="width: 10%;"/>
+										<table style="text-align: center">
+											<colgroup>
+												<col style="width: 5%;"/>
+												<col style="width: auto;"/>
+												<col style="width: auto;"/>
+												<col style="width: 10%;"/>
+												<col style="width: 20%;"/>
+												<col style="width: 10%;"/>
+											</colgroup>
 											<thead>
 												<tr>
 													<th>번호</th>
 													<th>제목</th>
 													<th>작성자</th>
-													<th>등록일</th>
-													<th>추천수</th>
 													<th>조회수</th>
+													<th>등록일</th>
 												</tr>
 											</thead>
 											<tbody>
-
-												<c:forEach items="${list}" var="list">
-													<tr>
-														<td>${list.notelist_num}</td>
-														<td>${list.note_title}</td>
-														<td>${list.note_content}</td>
-														<td>${list.mem_id}</td>
-														<td>${list.note_register_datetime}</td>
-														<td>${list.note_recommend}</td>
-														<td>${list.note_readCount}</td>
-													</tr>
-												</c:forEach>
+												<c:choose>
+													<c:when test="${empty boardList}">
+														<tr><td colspan="5" align="center">데이터가 없습니다</td> </tr>
+													</c:when>
+													<c:when test="${!empty boardList}">
+														<c:forEach var="list" items="${boardList}">
+														<tr>
+															<td><c:out value="${list.nh_num}"/></td>
+															<td><c:out value="${list.nh_title}"/></td>
+															<td><c:out value="${list.nh_register_id}"/></td>
+															<td><c:out value="${list.nh_viewCount}"/></td>
+															<td><c:out value="${list.nh_register_date}"/></td>
+														</tr>
+														</c:forEach>
+													</c:when>
+												</c:choose>
 											</tbody>
 										</table>
 									</p>
+									<button type="button" onclick="location.href='CreateNote'">노트 작성</button>
 								</article>
 							</div>
 							<div class="col-4 col-12-mobile" id="sidebar">

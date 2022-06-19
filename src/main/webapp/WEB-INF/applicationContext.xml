@@ -25,5 +25,4 @@
         <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
-    <mybatis-spring:component-scan base-package="com.notehub.mapper"/>
 </beans>
